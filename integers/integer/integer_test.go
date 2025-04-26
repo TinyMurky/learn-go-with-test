@@ -1,6 +1,9 @@
-package main
+package integer
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestAdd(t *testing.T) {
 	t.Run("Add two integer", func(t *testing.T) {
@@ -9,6 +12,14 @@ func TestAdd(t *testing.T) {
 
 		assetEqual(t, got, want)
 	})
+}
+
+func ExampleAdd() {
+	// 最下面那個Output go是真的會檢查的
+	sum := Add(1, 5)
+	fmt.Println(sum)
+	// Output: 6
+
 }
 
 func assetEqual[T comparable](t testing.TB, got, want T) {
