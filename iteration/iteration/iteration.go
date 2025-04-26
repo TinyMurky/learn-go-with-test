@@ -2,7 +2,7 @@ package iteration
 
 import "strings"
 
-const repeatedTime = 5
+// const repeatedTime = 5
 
 // func Repeat(str string) string {
 
@@ -15,10 +15,11 @@ const repeatedTime = 5
 // 	return strings.Join(answer, "")
 // }
 
-func Repeat(str string) string {
+// Repeat will repeat str with count time
+func Repeat(str string, count int) string {
 	var s strings.Builder
 
-	for range repeatedTime {
+	for range count {
 		// can use WriteString
 		s.WriteString(str) // 這個比下面快很多
 

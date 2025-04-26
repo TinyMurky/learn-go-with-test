@@ -1,13 +1,16 @@
 package iteration
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 func TestRepeat(t *testing.T) {
-	t.Run("It should repeat 5 times", func(t *testing.T) {
+	t.Run("It should repeat 10 times", func(t *testing.T) {
 
-		repeated := Repeat("a")
+		repeated := Repeat("a", 10)
 
-		expect := "aaaaa"
+		expect := "aaaaaaaaaa"
 
 		assertEqual(t, repeated, expect)
 	})
@@ -29,8 +32,14 @@ func TestRepeat(t *testing.T) {
 // ok   example.come/iteration/iteration  1.558s  // 整個 benchmark 測試耗時 1.558 秒
 func BenchmarkRepeat(b *testing.B) {
 	for i := 0; i < b.N; i++ {
-		Repeat("a")
+		Repeat("a", 10)
 	}
+}
+
+func ExampleRepeat() {
+	got := Repeat("a", 5)
+	fmt.Println(got)
+	// Output: aaaaa
 }
 
 func assertEqual[T comparable](t testing.TB, got, want T) {
