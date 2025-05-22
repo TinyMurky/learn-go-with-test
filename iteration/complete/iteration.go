@@ -55,15 +55,17 @@ func Repeat3(character string) string {
 }
 
 // Repeat4 forever
-// func Repeat4(character string) string {
-// 	var repeated string
 //
-// 	for {
-// 		repeated += character
-// 	}
+//	func Repeat4(character string) string {
+//		var repeated string
 //
-// 	return repeated
-// }
+//		for {
+//			repeated += character
+//		}
+//
+//		return repeated
+//	}
+//
 
 // Repeat5 用 string builder
 func Repeat5(character string) string {
