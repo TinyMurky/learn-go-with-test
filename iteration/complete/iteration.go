@@ -1,7 +1,10 @@
 // Package iteration a
 package iteration
 
-import "strings"
+import (
+	"encoding/json"
+	"strings"
+)
 
 // 講稿
 // 1. return ""
@@ -84,5 +87,6 @@ func Repeat6(character string, repeatTimes int) string {
 	for range repeatTimes {
 		repeated.WriteString(character)
 	}
+	json.MarshalIndent(v any, prefix string, indent string)
 	return repeated.String()
 }
