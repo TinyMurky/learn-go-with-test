@@ -1,7 +1,6 @@
 // Package dictionary is about map
 package dictionary
 
-// 這邊可以介紹 Uber style
 const (
 	ErrNotFound         = DictionaryErr("could not find the word you were looking for")
 	ErrWordExists       = DictionaryErr("cannot add word because it already exists")
